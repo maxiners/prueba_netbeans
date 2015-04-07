@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Reverse engineered socket 2015.03.25 21-17-07-359">
+  <ClassDiagramComponents>
+    <Class xPosition="20.0" yPosition="20.0" package="" name="SocketClient" visibility="public">
+      <Constructors/>
+      <Fields>
+        <Field name="recibido" visibility="package" type="String"/>
+        <Field name="osalida" visibility="package" type="OutputStream"/>
+        <Field name="dsalida" visibility="package" type="DataOutputStream"/>
+        <Field name="ientrada" visibility="package" type="InputStream"/>
+        <Field name="dentrada" visibility="package" type="DataInputStream"/>
+        <Field name="cliente" visibility="package" type="Socket"/>
+      </Fields>
+      <Methods>
+        <Method name="cliente" visibility="public" returnType="void"/>
+      </Methods>
+    </Class>
+    <Class xPosition="320.0" yPosition="20.0" package="cliente" name="Cliente" visibility="public">
+      <Constructors>
+        <Constructor name="Cliente" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="jPanel" visibility="package" type="JPanel"/>
+        <Field name="jTextAreaEnviar" visibility="package" type="JTextArea"/>
+        <Field name="jButtonEnviar" visibility="package" type="JButton"/>
+        <Field name="j" visibility="package" type="JFrame"/>
+      </Fields>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="620.0" yPosition="20.0" package="servidor" name="Servidor" visibility="public">
+      <Constructors>
+        <Constructor name="Servidor" visibility="public"/>
+      </Constructors>
+      <Fields>
+        <Field name="contenedor" visibility="package" type="Container"/>
+        <Field name="panel" visibility="package" type="JPanel"/>
+      </Fields>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class xPosition="920.0" yPosition="20.0" package="servidor" name="SocketServerHilo" visibility="public">
+      <Constructors>
+        <Constructor name="SocketServerHilo" visibility="public">
+          <Argument type="Socket" name="lsocket"/>
+        </Constructor>
+      </Constructors>
+      <Fields>
+        <Field name="recibido" visibility="package" type="String"/>
+        <Field name="osalida" visibility="package" type="OutputStream"/>
+        <Field name="dsalida" visibility="package" type="DataOutputStream"/>
+        <Field name="ientrada" visibility="package" type="InputStream"/>
+        <Field name="dentrada" visibility="package" type="DataInputStream"/>
+        <Field name="socket" visibility="package" type="Socket"/>
+      </Fields>
+      <Methods>
+        <Method name="run" visibility="public" returnType="void"/>
+      </Methods>
+    </Class>
+    <Class xPosition="20.0" yPosition="420.0" package="servidor" name="SocketServer" visibility="public">
+      <Constructors/>
+      <Fields/>
+      <Methods>
+        <Method name="main" visibility="public" returnType="void" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

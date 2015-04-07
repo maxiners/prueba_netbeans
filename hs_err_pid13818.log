@@ -1,0 +1,255 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (os_linux.cpp:4806), pid=13818, tid=140121465026304
+#  guarantee(mem_serialize_page != MAP_FAILED) failed: mmap Failed for memory serialize page
+#
+# JRE version:  (8.0_40-b20) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.40-b23 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x00007fffba7fe000,0x00007fffbaffd000],  sp=0x00007fffbaff7930,  free space=8166k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xa8e69d]
+V  [libjvm.so+0x4e8425]
+V  [libjvm.so+0x8e59b6]
+V  [libjvm.so+0xa35cb0]
+V  [libjvm.so+0x6ab02e]  JNI_CreateJavaVM+0x5e
+C  [libjli.so+0x2d5f]
+C  [libjli.so+0x7f1a]
+C  [libjli.so+0x47a9]
+C  [libjli.so+0x58f3]  JLI_Launch+0x1003
+C  [java+0x621]
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:07 428440                             /usr/lib/jvm/java-8-openjdk/jre/bin/java
+00600000-00601000 rw-p 00000000 08:07 428440                             /usr/lib/jvm/java-8-openjdk/jre/bin/java
+01a3b000-01a5c000 rw-p 00000000 00:00 0                                  [heap]
+7f708f938000-7f708f945000 r-xp 00000000 08:07 428399                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f708f945000-7f708fb44000 ---p 0000d000 08:07 428399                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f708fb44000-7f708fb46000 rw-p 0000c000 08:07 428399                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f708fb48000-7f708fb75000 r-xp 00000000 08:07 428407                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f708fb75000-7f708fd75000 ---p 0002d000 08:07 428407                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f708fd75000-7f708fd77000 rw-p 0002d000 08:07 428407                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f708fd78000-7f708fd85000 r-xp 00000000 08:07 428399                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f708fd85000-7f708ff84000 ---p 0000d000 08:07 428399                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f708ff88000-7f708ff8f000 r-xp 00000000 08:07 133786                     /usr/lib/librt-2.21.so
+7f708ff8f000-7f709018e000 ---p 00007000 08:07 133786                     /usr/lib/librt-2.21.so
+7f709018e000-7f709018f000 r--p 00006000 08:07 133786                     /usr/lib/librt-2.21.so
+7f709018f000-7f7090190000 rw-p 00007000 08:07 133786                     /usr/lib/librt-2.21.so
+7f7090190000-7f7090293000 r-xp 00000000 08:07 133813                     /usr/lib/libm-2.21.so
+7f7090293000-7f7090493000 ---p 00103000 08:07 133813                     /usr/lib/libm-2.21.so
+7f7090493000-7f7090494000 r--p 00103000 08:07 133813                     /usr/lib/libm-2.21.so
+7f7090494000-7f7090495000 rw-p 00104000 08:07 133813                     /usr/lib/libm-2.21.so
+7f7090498000-7f7091137000 r-xp 00000000 08:07 428431                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f7091137000-7f7091337000 ---p 00c9f000 08:07 428431                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f7091337000-7f7091403000 rw-p 00c9f000 08:07 428431                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f7091403000-7f7091444000 rw-p 00000000 00:00 0 
+7f7091448000-7f70915e1000 r-xp 00000000 08:07 133765                     /usr/lib/libc-2.21.so
+7f70915e1000-7f70917e1000 ---p 00199000 08:07 133765                     /usr/lib/libc-2.21.so
+7f70917e1000-7f70917e5000 r--p 00199000 08:07 133765                     /usr/lib/libc-2.21.so
+7f70917e5000-7f70917e7000 rw-p 0019d000 08:07 133765                     /usr/lib/libc-2.21.so
+7f70917e7000-7f70917eb000 rw-p 00000000 00:00 0 
+7f70917f0000-7f70917f2000 r-xp 00000000 08:07 133795                     /usr/lib/libdl-2.21.so
+7f70917f2000-7f70919f2000 ---p 00002000 08:07 133795                     /usr/lib/libdl-2.21.so
+7f70919f2000-7f70919f3000 r--p 00002000 08:07 133795                     /usr/lib/libdl-2.21.so
+7f70919f3000-7f70919f4000 rw-p 00003000 08:07 133795                     /usr/lib/libdl-2.21.so
+7f70919f8000-7f7091a05000 r-xp 00000000 08:07 428428                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f7091a05000-7f7091c05000 ---p 0000d000 08:07 428428                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f7091c05000-7f7091c06000 rw-p 0000d000 08:07 428428                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f7091c08000-7f7091c1d000 r-xp 00000000 08:07 136861                     /usr/lib/libz.so.1.2.8
+7f7091c1d000-7f7091e1c000 ---p 00015000 08:07 136861                     /usr/lib/libz.so.1.2.8
+7f7091e1c000-7f7091e1d000 r--p 00014000 08:07 136861                     /usr/lib/libz.so.1.2.8
+7f7091e1d000-7f7091e1e000 rw-p 00015000 08:07 136861                     /usr/lib/libz.so.1.2.8
+7f7091e20000-7f7091e38000 r-xp 00000000 08:07 133785                     /usr/lib/libpthread-2.21.so
+7f7091e38000-7f7092037000 ---p 00018000 08:07 133785                     /usr/lib/libpthread-2.21.so
+7f7092037000-7f7092038000 r--p 00017000 08:07 133785                     /usr/lib/libpthread-2.21.so
+7f7092038000-7f7092039000 rw-p 00018000 08:07 133785                     /usr/lib/libpthread-2.21.so
+7f7092039000-7f709203d000 rw-p 00000000 00:00 0 
+7f7092040000-7f7092062000 r-xp 00000000 08:07 133809                     /usr/lib/ld-2.21.so
+7f709225b000-7f709225d000 rw-p 00000000 00:00 0 
+7f709225d000-7f709225e000 r--p 00000000 00:00 0 
+7f709225e000-7f7092261000 rw-p 00000000 00:00 0 
+7f7092261000-7f7092262000 r--p 00021000 08:07 133809                     /usr/lib/ld-2.21.so
+7f7092262000-7f7092263000 rw-p 00022000 08:07 133809                     /usr/lib/ld-2.21.so
+7f7092263000-7f7092265000 rw-p 00000000 00:00 0 
+7f7092265000-7f7092266000 rw-p 00000000 00:00 0 
+7fffbafdd000-7fffbaffe000 rw-p 00000000 00:00 0                          [stack]
+7fffbb198000-7fffbb19a000 r--p 00000000 00:00 0                          [vvar]
+7fffbb19a000-7fffbb19c000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: cliente.Cliente
+java_class_path (initial): /usr/share/netbeans/java/modules/ext/AbsoluteLayout.jar:/usr/share/netbeans/java/modules/ext/beansbinding-1.2.1.jar:/home/maximiliano/NetBeansProjects/socket/build/classes
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+LD_LIBRARY_PATH=/usr/lib/jvm/default/bin/../jre/lib/amd64:/usr/lib/jvm/default/bin/../jre/lib/i386:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa8f160], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa8f160], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGPIPE: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGXFSZ: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGILL: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:NAME="Arch Linux"
+ID=arch
+PRETTY_NAME="Arch Linux"
+ANSI_COLOR="0;36"
+HOME_URL="https://www.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+
+
+uname:Linux 3.19.2-1-ARCH #1 SMP PREEMPT Wed Mar 18 16:21:02 CET 2015 x86_64
+libc:(null) (null) (fixed stack)
+rlimit: STACK 8192k, CORE 0k, NPROC 22460, NOFILE 4096, AS infinity
+load average:27.04 15.13 6.48
+
+/proc/meminfo:
+MemTotal:        5755352 kB
+MemFree:           95868 kB
+MemAvailable:      32092 kB
+Buffers:             140 kB
+Cached:            34604 kB
+SwapCached:           60 kB
+Active:          4262564 kB
+Inactive:        1069732 kB
+Active(anon):    4255680 kB
+Inactive(anon):  1064128 kB
+Active(file):       6884 kB
+Inactive(file):     5604 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       1048572 kB
+SwapFree:              0 kB
+Dirty:                 4 kB
+Writeback:             0 kB
+AnonPages:       5297664 kB
+Mapped:            13116 kB
+Shmem:             21972 kB
+Slab:              85580 kB
+SReclaimable:      28884 kB
+SUnreclaim:        56696 kB
+KernelStack:       45312 kB
+PageTables:        87516 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3926248 kB
+Committed_AS:   25653452 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      308272 kB
+VmallocChunk:   34359426940 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1789952 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      255364 kB
+DirectMap2M:     5736448 kB
+DirectMap1G:           0 kB
+
+
+CPU:total 2 
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 16
+model name	: AMD A6-4455M APU with Radeon(tm) HD Graphics
+stepping	: 1
+microcode	: 0x6001119
+cpu MHz		: 2100.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 1
+apicid		: 16
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave avx f16c lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs xop skinit wdt lwp fma4 tce nodeid_msr tbm topoext perfctr_core perfctr_nb arat cpb hw_pstate npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold vmmcall bmi1
+bugs		: fxsave_leak
+bogomips	: 4194.02
+TLB size	: 1536 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 21
+model		: 16
+model name	: AMD A6-4455M APU with Radeon(tm) HD Graphics   
+stepping	: 1
+microcode	: 0x6001119
+cpu MHz		: 2100.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 1
+apicid		: 17
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc extd_apicid aperfmperf pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 popcnt aes xsave avx f16c lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs xop skinit wdt lwp fma4 tce nodeid_msr tbm topoext perfctr_core perfctr_nb arat cpb hw_pstate npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold vmmcall bmi1
+bugs		: fxsave_leak
+bogomips	: 4194.02
+TLB size	: 1536 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management: ts ttp tm 100mhzsteps hwpstate cpb eff_freq_ro
+
+
+
+Memory: 4k page, physical 5755352k(95868k free), swap 1048572k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.40-b23) for linux-amd64 JRE (1.8.0_40-b20), built on Mar 15 2015 09:37:38 by "builduser" with gcc 4.9.2 20150304 (prerelease)
+
+time: Sat Mar 28 18:39:55 2015
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
